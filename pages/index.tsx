@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import faker from 'faker';
+
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -20,9 +22,9 @@ const Home: NextPage = () => {
           </div>
 
           <div className={styles.card}>
-            <Link href="/user/m2i">
+            <Link href={`/user/${faker.name.firstName()}`}>
               <h2>User Page &rarr;</h2>
-              <p>User name is M2I</p>
+              <p>Random User Name</p>
             </Link>
           </div>
         </div>
